@@ -4,3 +4,6 @@ The project involved was to create a Postgresql database and tables that would t
 
 To interact with the database and tables, a series of functions were written in Python to allow the user to input tournament data as well as retrieve an output analyzing aspects of the tournament, such as a list of players involved, the matches they played, their win records, and the pairings for the next round of the tournament.
 
+The tournament.sql file provides the sql code for the creation of the database, tables, and views involved.
+The tournament.py file provides the python code written to interact with the database file.
+The tournament_test.py file was created by Udacity to test that the code in the other two files were written correctly.
