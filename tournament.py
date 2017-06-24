@@ -32,9 +32,8 @@ def countPlayers():
     conn = psycopg2.connect("dbname=tournament")
     c = conn.cursor()
     c.execute("select count(*) as num from players;")
-    results = c.fetchall()
-    for row in results:
-        return row[0]
+    results = c.fetchone()
+    return results[0]
     conn.close()
 
 def registerPlayer(name):

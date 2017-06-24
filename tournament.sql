@@ -13,9 +13,9 @@ CREATE DATABASE tournament;
 
 \c tournament;
 
-CREATE TABLE players (playerid SERIAL, name TEXT);
+CREATE TABLE players (playerid SERIAL primary key, name TEXT);
 
-CREATE TABLE matches (matchid SERIAL, round INTEGER, winner INTEGER, loser INTEGER);
+CREATE TABLE matches (matchid SERIAL primary key, winner INTEGER references players (playerid), loser INTEGER references players (playerid));
 
 CREATE VIEW winners as
 SELECT winID, winNAME, count(matches.WINNER) AS WINS, matchTOT
