@@ -20,7 +20,7 @@ def connect():
 def deleteMatches():
     """Remove all the match records from the database."""
     db, c = connect()
-    query = "truncate only matches cascade;"
+    query = "truncate only matches;"
     c.execute(query)
     db.commit()
     db.close()
